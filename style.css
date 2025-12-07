@@ -211,7 +211,7 @@ input:-webkit-autofill {
     width: 13rem;
   }
   .dob-inputs .dob-input-holder label {
-    font-size: 1rem;
+    font-size: 1.1rem;
     letter-spacing: 2px;
   }
   .dob-inputs .dob-input-holder .error-msg {
@@ -236,7 +236,7 @@ input:-webkit-autofill {
     width: 12rem;
   }
   .dob-inputs .dob-input-holder label {
-    font-size: 1rem;
+    font-size: 1.1rem;
     letter-spacing: 1.75px;
   }
   .dob-inputs .dob-input-holder .error-msg {
@@ -310,13 +310,14 @@ input:-webkit-autofill {
     height: 6.2rem;
     right: 50%;
     transform: translate(50%, -50%);
+    padding: 1.8rem;
   }
 }
 @media (max-width: 480px) {
   .submit-box .submit-btn {
     width: 5.8rem;
     height: 5.8rem;
-    padding: 1.5;
+    padding: 1.6rem;
   }
 }
 
@@ -358,6 +359,16 @@ input:-webkit-autofill {
 .letter-spacing-8 {
   letter-spacing: 8px;
 }
+@media (max-width: 1024px) {
+  .letter-spacing-8 {
+    letter-spacing: 7px;
+  }
+}
+@media (max-width: 768px) {
+  .letter-spacing-8 {
+    letter-spacing: 6px;
+  }
+}
 
 .display-none {
   display: none;
@@ -365,6 +376,16 @@ input:-webkit-autofill {
 
 .pd-r-8 {
   padding-right: 8px;
+}
+@media (max-width: 1024px) {
+  .pd-r-8 {
+    padding-right: 7px;
+  }
+}
+@media (max-width: 768px) {
+  .pd-r-8 {
+    padding-right: 6px;
+  }
 }
 
 .background-purple {

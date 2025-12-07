@@ -263,7 +263,7 @@ input:-webkit-autofill {
       width: 13rem;
 
       label {
-        font-size: 1rem;
+        font-size: 1.1rem;
         letter-spacing: 2px;
       }
 
@@ -296,7 +296,7 @@ input:-webkit-autofill {
       width: 12rem;
 
       label {
-        font-size: 1rem;
+        font-size: 1.1rem;
         letter-spacing: 1.75px;
       }
 
@@ -397,6 +397,7 @@ input:-webkit-autofill {
       height: 6.2rem;
       right: 50%;
       transform: translate(50%, -50%);
+      padding: 1.8rem;
 
 
     }
@@ -406,7 +407,7 @@ input:-webkit-autofill {
     .submit-btn {
       width: 5.8rem;
       height: 5.8rem;
-      padding: 1.5;
+      padding: 1.6rem;
 
 
     }
@@ -453,6 +454,14 @@ input:-webkit-autofill {
 
 .letter-spacing-8 {
   letter-spacing: 8px;
+
+  @include respond-down(lg) {
+    letter-spacing: 7px;
+  }
+
+  @include respond-down(md) {
+    letter-spacing: 6px;
+  }
 }
 
 .display-none {
@@ -461,6 +470,14 @@ input:-webkit-autofill {
 
 .pd-r-8 {
   padding-right: 8px;
+
+  @include respond-down(lg) {
+    padding-right: 7px;
+  }
+
+  @include respond-down(md) {
+    padding-right: 6px;
+  }
 }
 
 .background-purple {
