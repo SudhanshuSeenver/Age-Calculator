@@ -1,4 +1,31 @@
 /* ------------------------------
+   Break Points
+------------------------------ */
+
+$breakpoints: (
+  xs: 480px,
+  // phones
+  sm: 640px,
+  // large phones
+  md: 768px,
+  // tablet
+  lg: 1024px,
+  // laptop
+  xl: 1280px,
+  // desktop
+  xxl:1536px // large desktop
+);
+
+
+@mixin respond-down($size) {
+  @media (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+
+
+/* ------------------------------
    Modern CSS Reset
 ------------------------------ */
 
@@ -23,6 +50,18 @@ body {
 html {
   scroll-behavior: smooth;
   font-size: 10px;
+
+  // @include respond-down(xl) {
+  //   font-size: 9px;
+  // }
+
+  // @include respond-down(md) {
+  //   font-size: 8px;
+  // }
+
+  // @include respond-down(sm) {
+  //   font-size: 7px;
+  // }
 }
 
 body {
@@ -121,9 +160,29 @@ input:-webkit-autofill {
   border-bottom-right-radius: 30%;
   min-width: 360px;
   max-width: 800px;
-  width: 85%;
+  width: 65%;
   min-height: 400px;
   padding: 4.5rem;
+
+  @include respond-down(lg) {
+    width: 75%;
+  }
+
+  @include respond-down(md) {
+    width: 90%;
+    padding: 4rem;
+  }
+
+  @include respond-down(sm) {
+    width: 85%;
+    padding: 3rem;
+  }
+
+  @include respond-down(xs) {
+    width: 95%;
+    padding: 4.5rem 2.4rem;
+  }
+
 }
 
 /* ------------------------------
@@ -158,7 +217,7 @@ input:-webkit-autofill {
 
   .dob-input-box {
     padding: 2rem 2.25rem;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     border: 1px solid var(--grey-200);
     width: 100%;
     line-height: 0rem;
@@ -196,6 +255,100 @@ input:-webkit-autofill {
     }
   }
 
+  @include respond-down(lg) {
+    gap: 2rem;
+    margin-bottom: 3.2rem;
+
+    .dob-input-holder {
+      width: 13rem;
+
+      label {
+        font-size: 1rem;
+        letter-spacing: 2px;
+      }
+
+      .error-msg {
+        font-size: 1.1rem;
+
+      }
+    }
+
+    .dob-input-box {
+      padding: 1.75rem 2rem;
+
+      .dob-input {
+
+        width: 100%;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+        height: 2.8rem;
+
+      }
+    }
+
+  }
+
+  @include respond-down(sm) {
+    gap: 2rem;
+    margin-bottom: 6.4rem;
+
+    .dob-input-holder {
+      width: 12rem;
+
+      label {
+        font-size: 1rem;
+        letter-spacing: 1.75px;
+      }
+
+      .error-msg {
+        font-size: 0.85rem;
+
+      }
+    }
+
+    .dob-input-box {
+      padding: 1.4rem 1.6rem;
+
+      .dob-input {
+
+        width: 100%;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        height: 2.4rem;
+
+      }
+    }
+
+  }
+
+  @include respond-down(xs) {
+    gap: 1.75rem;
+    margin-bottom: 5.6rem;
+
+    .dob-input-holder {
+      width: 11rem;
+
+
+      .error-msg {
+        font-size: 0.8rem;
+
+      }
+    }
+
+    .dob-input-box {
+      padding: 1.2rem 1.4rem;
+
+      .dob-input {
+
+        width: 100%;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        height: 2.2rem;
+
+      }
+    }
+
+  }
 }
 
 /* ------------------------------
@@ -227,6 +380,37 @@ input:-webkit-autofill {
       // styling here if needed
     }
   }
+
+  @include respond-down(lg) {
+    .submit-btn {
+      width: 6.4rem;
+      height: 6.4rem;
+      padding: 1.6rem;
+
+
+    }
+  }
+
+  @include respond-down(sm) {
+    .submit-btn {
+      width: 6.2rem;
+      height: 6.2rem;
+      right: 50%;
+      transform: translate(50%, -50%);
+
+
+    }
+  }
+
+  @include respond-down(xs) {
+    .submit-btn {
+      width: 5.8rem;
+      height: 5.8rem;
+      padding: 1.5;
+
+
+    }
+  }
 }
 
 /* ------------------------------
@@ -243,6 +427,24 @@ input:-webkit-autofill {
 
   span {
     color: var(--purple-500);
+  }
+
+  @include respond-down(lg) {
+    margin-top: 3.2rem;
+    font-size: 7.2rem;
+    line-height: 9rem;
+  }
+
+  @include respond-down(sm) {
+    margin-top: 6.4rem;
+    font-size: 6rem;
+    line-height: 8rem;
+  }
+
+  @include respond-down(xs) {
+    margin-top: 5.6rem;
+    font-size: 5.6rem;
+    line-height: 7rem;
   }
 }
 

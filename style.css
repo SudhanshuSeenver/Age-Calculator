@@ -1,4 +1,7 @@
 /* ------------------------------
+   Break Points
+------------------------------ */
+/* ------------------------------
    Modern CSS Reset
 ------------------------------ */
 *,
@@ -116,9 +119,32 @@ input:-webkit-autofill {
   border-bottom-right-radius: 30%;
   min-width: 360px;
   max-width: 800px;
-  width: 85%;
+  width: 65%;
   min-height: 400px;
   padding: 4.5rem;
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 75%;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 4rem;
+  }
+}
+@media (max-width: 640px) {
+  .container {
+    width: 85%;
+    padding: 3rem;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 4.5rem 2.4rem;
+  }
 }
 
 /* ------------------------------
@@ -149,7 +175,7 @@ input:-webkit-autofill {
 }
 .dob-inputs .dob-input-box {
   padding: 2rem 2.25rem;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   border: 1px solid var(--grey-200);
   width: 100%;
   line-height: 0rem;
@@ -176,6 +202,77 @@ input:-webkit-autofill {
   -webkit-appearance: none;
   margin: 0;
 }
+@media (max-width: 1024px) {
+  .dob-inputs {
+    gap: 2rem;
+    margin-bottom: 3.2rem;
+  }
+  .dob-inputs .dob-input-holder {
+    width: 13rem;
+  }
+  .dob-inputs .dob-input-holder label {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+  .dob-inputs .dob-input-holder .error-msg {
+    font-size: 1.1rem;
+  }
+  .dob-inputs .dob-input-box {
+    padding: 1.75rem 2rem;
+  }
+  .dob-inputs .dob-input-box .dob-input {
+    width: 100%;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    height: 2.8rem;
+  }
+}
+@media (max-width: 640px) {
+  .dob-inputs {
+    gap: 2rem;
+    margin-bottom: 6.4rem;
+  }
+  .dob-inputs .dob-input-holder {
+    width: 12rem;
+  }
+  .dob-inputs .dob-input-holder label {
+    font-size: 1rem;
+    letter-spacing: 1.75px;
+  }
+  .dob-inputs .dob-input-holder .error-msg {
+    font-size: 0.85rem;
+  }
+  .dob-inputs .dob-input-box {
+    padding: 1.4rem 1.6rem;
+  }
+  .dob-inputs .dob-input-box .dob-input {
+    width: 100%;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    height: 2.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .dob-inputs {
+    gap: 1.75rem;
+    margin-bottom: 5.6rem;
+  }
+  .dob-inputs .dob-input-holder {
+    width: 11rem;
+  }
+  .dob-inputs .dob-input-holder .error-msg {
+    font-size: 0.8rem;
+  }
+  .dob-inputs .dob-input-box {
+    padding: 1.2rem 1.4rem;
+  }
+  .dob-inputs .dob-input-box .dob-input {
+    width: 100%;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    height: 2.2rem;
+  }
+}
 
 /* ------------------------------
    Submit Button
@@ -200,6 +297,29 @@ input:-webkit-autofill {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 1024px) {
+  .submit-box .submit-btn {
+    width: 6.4rem;
+    height: 6.4rem;
+    padding: 1.6rem;
+  }
+}
+@media (max-width: 640px) {
+  .submit-box .submit-btn {
+    width: 6.2rem;
+    height: 6.2rem;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}
+@media (max-width: 480px) {
+  .submit-box .submit-btn {
+    width: 5.8rem;
+    height: 5.8rem;
+    padding: 1.5;
+  }
+}
+
 /* ------------------------------
    Result
 ------------------------------ */
@@ -212,6 +332,27 @@ input:-webkit-autofill {
 }
 .calculated-age span {
   color: var(--purple-500);
+}
+@media (max-width: 1024px) {
+  .calculated-age {
+    margin-top: 3.2rem;
+    font-size: 7.2rem;
+    line-height: 9rem;
+  }
+}
+@media (max-width: 640px) {
+  .calculated-age {
+    margin-top: 6.4rem;
+    font-size: 6rem;
+    line-height: 8rem;
+  }
+}
+@media (max-width: 480px) {
+  .calculated-age {
+    margin-top: 5.6rem;
+    font-size: 5.6rem;
+    line-height: 7rem;
+  }
 }
 
 .letter-spacing-8 {
