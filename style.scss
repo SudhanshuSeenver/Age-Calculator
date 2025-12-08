@@ -199,6 +199,7 @@ input:-webkit-autofill {
   .dob-input-holder {
     width: 15rem;
 
+
     label {
       font-size: 1.1rem;
       color: var(--grey-500);
@@ -222,6 +223,7 @@ input:-webkit-autofill {
     border: 1px solid var(--grey-200);
     width: 100%;
     line-height: 0rem;
+    cursor: text;
 
     &:focus-within {
       border-color: var(--purple-500);

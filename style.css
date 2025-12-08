@@ -179,6 +179,7 @@ input:-webkit-autofill {
   border: 1px solid var(--grey-200);
   width: 100%;
   line-height: 0rem;
+  cursor: text;
 }
 .dob-inputs .dob-input-box:focus-within {
   border-color: var(--purple-500);

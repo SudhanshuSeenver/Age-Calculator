@@ -271,3 +271,10 @@ dobContainer.addEventListener("focusout", (e) => {
   submitBtnEle.classList.add("background-purple");
   submitBtnEle.classList.remove("background-black");
 });
+
+dobContainer.addEventListener("click", (e) => {
+  const box = e.target.closest("[data-input-box]");
+  if (!box) return;
+
+  box.querySelector("input")?.focus();
+});
