@@ -4,6 +4,30 @@ const maxLengthinput = {
   year: 4,
 };
 
+function easeOutQuad(t) {
+  return t * (2 - t);
+}
+
+function easeOutCurve(t, p) {
+  return 1 - Math.pow(1 - t, p);
+}
+
+function animateNumber(element, endValue, duration = 800) {
+  const startTime = performance.now();
+
+  function update(now) {
+    const rawProgress = Math.min((now - startTime) / duration, 1);
+    const progress = easeOutCurve(rawProgress, 3);
+
+    const value = Math.floor(progress * endValue);
+    element.textContent = value;
+
+    if (rawProgress < 1) requestAnimationFrame(update);
+  }
+
+  requestAnimationFrame(update);
+}
+
 const updateErrorMsg = (field) => {
   const parent = parentInput[field];
   const label = labelInput[field];
@@ -163,7 +187,7 @@ const calculateAge = (dob) => {
 
   if (day > currDay) {
     currMonth--;
-    cal.day = getDays(month, currMonth) - day + currDay;
+    cal.day = getDays(currMonth, currYear) - day + currDay;
   } else {
     cal.day = currDay - day;
   }
@@ -211,7 +235,8 @@ const dobSubmit = (e) => {
   type.forEach((tp) => {
     calAgeText[tp].classList.toggle("letter-spacing-8", false);
     calAgeText[tp].classList.toggle("pd-r-8", true);
-    calAgeText[tp].textContent = age[tp];
+    animateNumber(calAgeText[tp], age[tp]);
+    // calAgeText[tp].textContent = age[tp];
   });
 };
 

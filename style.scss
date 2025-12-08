@@ -1,3 +1,4 @@
+@use "sass:map";
 /* ------------------------------
    Break Points
 ------------------------------ */
@@ -18,7 +19,7 @@ $breakpoints: (
 
 
 @mixin respond-down($size) {
-  @media (max-width: map-get($breakpoints, $size)) {
+  @media (max-width: map.get($breakpoints, $size)) {
     @content;
   }
 }
@@ -375,6 +376,11 @@ input:-webkit-autofill {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--black) !important;
+    }
 
     svg {
       // styling here if needed

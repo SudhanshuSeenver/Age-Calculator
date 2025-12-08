@@ -296,6 +296,10 @@ input:-webkit-autofill {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.2s ease-in-out;
+}
+.submit-box .submit-btn:hover {
+  background-color: var(--black) !important;
 }
 @media (max-width: 1024px) {
   .submit-box .submit-btn {
